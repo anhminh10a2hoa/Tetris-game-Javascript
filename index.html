@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tetris game</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: black;">
+    <div class="container" id="mainScreen">
+        <h2>Tetris game</h2>
+        <div class="row">
+            <div class="col-6">
+                <h3>Your score</h3>
+                <div id="score"></div>
+                <p id="alert" style="color:red; font-size: 20px; display:none">Wrong button!!!</p>
+                <div id="tetrisImage" style="margin-bottom: 30px;display:none">
+                    <img src="images/tetrisGame.gif" alt="image" height="300px">
+                </div>
+                <div id="instrution">
+                    <img src="images/keyboard.png" alt="image" height="150px">
+                    <p style="font-size: 20px;">a: move piece left<br> d: move piece right<br> w: move piece counter clockwise<br> s: move piece clockwise<br> space: make piece drop faster</p>
+                </div>
+                <input type="button" id="exit" value="Exit game">
+            </div>
+            <div class="col-6">
+                <div class="canvas">
+                    <canvas id="tetris" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="finishedGame" style="display: none;">
+        <img style="margin-top: 100px" src="images/bye.gif" alt="image" height="300px">
+        <h3 style="margin-top: 30px">Thanks for playing</h3>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
